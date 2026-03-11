@@ -118,7 +118,7 @@ const dictionary = [
 
   // ── PHRASES ──────────────────────────────────────────
   { english: "what are you doing",               filipino: "anong ginagawa mo",        manide: "Wa ano gawa-gawa mo",       phonetic: "wa A-no GA-wa-GA-wa mo",        audio: "audio/Simple Sentences/Anongginagawamo.mp3",          category: "phrases" },
-  { english: "what do you want to eat",          filipino: "anong gusto mong kainin",  manide: "Wa ano ibog mo ikaon",      phonetic: "wa A-no I-bog mo i-KA-on",      audio: "audio/Simple Sentences/Anonggustomongdpagkain.mp3",   category: "phrases" },
+  { english: "what do you want to eat",          filipino: "anong gusto mong kainin",  manide: "Wa ano ibog mo ikaon",      phonetic: "wa A-no I-bog mo i-KA-on",      audio: "audio/Simple Sentences/Anonggustomongpagkain.mp3",   category: "phrases" },
   { english: "can you come with me", filipino: "pwede mo akong samahan", manide: "Atebanikmo", phonetic: "a-te-BA-nik-mo", audio: "audio/Simple Sentences/sspwedemobaakongsamahan.mp3", category: "phrases" },
   { english: "is there anything you want to say", filipino: "may gusto ka bang sabihin", manide: "Igakang ibog a igkado", phonetic: "i-GA-kang I-bog a ig-KA-do",   audio: "audio/Simple Sentences/maygustokabangsabihin.mp3", category: "phrases" },
   { english: "listen to me",                     filipino: "makinig ka sa akin",       manide: "Magkalkal ka da-ko",        phonetic: "mag-KAL-kal ka da-KO",          audio: "audio/Simple Sentences/makinigkasakin.mp3",         category: "phrases" },
