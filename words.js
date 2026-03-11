@@ -36,14 +36,14 @@ const dictionary = [
   // ── GREETINGS & BASIC DAILY USE ──────────────────────
   { english: "hello",             filipino: "kumusta",         manide: "Kumusta ka de",     phonetic: "ku-MUS-ta ka de",      audio: "audio/Basic Daily use words/Hello.mp3",         category: "greetings" },
   { english: "goodbye",           filipino: "paalam",          manide: "Adi Kami de",       phonetic: "A-di KA-mi de",        audio: "audio/Basic Daily use words/Goodbye.mp3",       category: "greetings" },
-  { english: "thank you",         filipino: "salamat",         manide: "Salamat de ka",     phonetic: "sa-LA-mat de ka",      audio: "audio/Basic Daily use words/Thank You.mp3",     category: "greetings" },
+  { english: "thank you",         filipino: "salamat",         manide: "Salamat de ka",     phonetic: "sa-LA-mat de ka",      audio: "audio/Basic Daily use words/ThankYou.mp3",     category: "greetings" },
   { english: "sorry",             filipino: "paumanhin",       manide: "Pasensya de ka",    phonetic: "pa-SEN-sya de ka",     audio: "audio/Basic Daily use words/Sorry.mp3",         category: "greetings" },
-  { english: "excuse me",         filipino: "makikiraan",      manide: "Palakade ne ki an", phonetic: "pa-la-KA-de ne ki an", audio: "audio/Basic Daily use words/Excuse me.mp3",     category: "greetings" },
+  { english: "excuse me",         filipino: "makikiraan",      manide: "Palakade ne ki an", phonetic: "pa-la-KA-de ne ki an", audio: "audio/Basic Daily use words/Excuseme.mp3",     category: "greetings" },
   { english: "good morning",      filipino: "magandang umaga", manide: "Abi abi",           phonetic: "A-bi A-bi",            audio: "audio/Basic Daily use words/Morning.mp3",       category: "greetings" },
   { english: "good night",        filipino: "magandang gabi",  manide: "Ipigisikdi",        phonetic: "i-pi-gi-SIK-di",       audio: "audio/Basic Daily use words/Night.mp3",         category: "greetings" },
-  { english: "are you happy",     filipino: "masaya ka ba",    manide: "Nauumok ka",        phonetic: "na-u-U-mok ka",        audio: "audio/Simple Sentences/Masaya ka ba.mp3",       category: "greetings" },
-  { english: "i love you",        filipino: "mahal kita",      manide: "Mahal ki ka",       phonetic: "MA-hal ki ka",         audio: "audio/Simple Sentences/Mahal Kita.mp3",         category: "greetings" },
-  { english: "you are beautiful", filipino: "maganda ka",      manide: "Magayaon ka",       phonetic: "ma-ga-YA-on ka",       audio: "audio/Simple Sentences/Maganda ka.mp3",          category: "greetings" },
+  { english: "are you happy",     filipino: "masaya ka ba",    manide: "Nauumok ka",        phonetic: "na-u-U-mok ka",        audio: "audio/Simple Sentences/masayakaba.mp3",       category: "greetings" },
+  { english: "i love you",        filipino: "mahal kita",      manide: "Mahal ki ka",       phonetic: "MA-hal ki ka",         audio: "audio/Simple Sentences/Mahalkita.mp3",         category: "greetings" },
+  { english: "you are beautiful", filipino: "maganda ka",      manide: "Magayaon ka",       phonetic: "ma-ga-YA-on ka",       audio: "audio/Simple Sentences/magandaka.mp3",          category: "greetings" },
 
   // ── PEOPLE & FAMILY ──────────────────────────────────
   { english: "friend", filipino: "kaibigan", manide: "Kaiba",         phonetic: "ka-I-ba",         audio: "audio/Basic Daily use words/Friend.mp3", category: "family" },
@@ -53,7 +53,7 @@ const dictionary = [
 
   // ── ACTION WORDS ─────────────────────────────────────
   { english: "eat",      filipino: "kumain",     manide: "Kaon",              phonetic: "KA-on",                audio: "audio/Basic Daily use words/Eat.mp3",    category: "actions" },
-  { english: "drink",    filipino: "uminom",     manide: "Inomin de",         phonetic: "i-NO-min de",          audio: "audio/Basic Daily use words/To Drink.mp3",  category: "actions" },
+  { english: "drink",    filipino: "uminom",     manide: "Inomin de",         phonetic: "i-NO-min de",          audio: "audio/Basic Daily use words/ToDrink.mp3",  category: "actions" },
   { english: "food",     filipino: "pagkain",    manide: "Pagkaon",           phonetic: "pag-KA-on",            audio: "audio/Basic Daily use words/Food.mp3",   category: "actions" },
   { english: "come",     filipino: "halika",     manide: "Pumahay ka de",     phonetic: "pu-MA-hay ka de",      audio: "audio/Basic Daily use words/Come.mp3",   category: "actions" },
   { english: "go",       filipino: "umalis",     manide: "Iglakad",           phonetic: "ig-LA-kad",            audio: "audio/Basic Daily use words/Go.mp3",     category: "actions" },
@@ -81,12 +81,12 @@ const dictionary = [
   { english: "wake up",  filipino: "gumising",   manide: "Begkat",            phonetic: "BEG-kat",              audio: "audio/Action Words/Wake.mp3",            category: "actions" },
   { english: "teach",    filipino: "magturo",    manide: "Tudtudi",           phonetic: "tud-TU-di",            audio: "audio/Action Words/Teach.mp3",           category: "actions" },
   { english: "learn",    filipino: "matuto",     manide: "Aadal",             phonetic: "a-A-dal",              audio: "audio/Action Words/Learn.mp3",           category: "actions" },
-  { english: "forget",   filipino: "malimutan",  manide: "Nalingawan",        phonetic: "na-li-NGA-wan",        audio: "audio/Action Words/Forget.mp3",          category: "actions" },
-  { english: "remember", filipino: "Naalala ko", manide: "Naintuman ko",      phonetic: "na-in-TU-man ko",      audio: "audio/Simple Sentences/Naalala ko.mp3",     category: "actions" },
+  { english: "forget",   filipino: "malimutan",  manide: "Nalingawan",        phonetic: "na-li-NGA-wan",        audio: "audio/Action Words/nakalimutanko.mp3",          category: "actions" },
+  { english: "remember", filipino: "Naalala ko", manide: "Naintuman ko",      phonetic: "na-in-TU-man ko",      audio: "audio/Simple Sentences/naalalako.mp3",     category: "actions" },
   { english: "arrive",   filipino: "dumating",   manide: "Kakadetung payang", phonetic: "ka-ka-de-TUNG pa-yang", audio: "audio/Action Words/Arrive.mp3",         category: "actions" },
   { english: "leave",    filipino: "umalis",     manide: "Palakade",          phonetic: "pa-la-KA-de",          audio: "audio/Action Words/Leave.mp3",           category: "actions" },
   { english: "borrow",   filipino: "humiram",    manide: "Subli",             phonetic: "SUB-li",               audio: "audio/Action Words/Borrow.mp3",          category: "actions" },
-  { english: "return",   filipino: "ibalik",     manide: "Pagsuni",           phonetic: "pag-SU-ni",            audio: "audio/Simple Sentences/Ibalik ko na, ibabalik ko na.mp3", category: "actions" },
+  { english: "return",   filipino: "ibalik",     manide: "Pagsuni",           phonetic: "pag-SU-ni",            audio: "audio/Simple Sentences/ibalikkona.mp3", category: "actions" },
   { english: "improve",  filipino: "pagbutihin", manide: "Beley",             phonetic: "BE-ley",               audio: "audio/Action Words/Improve.mp3",         category: "actions" },
   { english: "ruin",     filipino: "sirain",     manide: "Isira",             phonetic: "i-SI-ra",              audio: "audio/Action Words/Ruin.mp3",            category: "actions" },
   { english: "choose",   filipino: "pumili",     manide: "Piliin",            phonetic: "pi-LI-in",             audio: "audio/Action Words/Choose.mp3",          category: "actions" },
@@ -95,7 +95,7 @@ const dictionary = [
   { english: "keep",     filipino: "itago",      manide: "Pag iimpis",        phonetic: "pag i-IM-pis",         audio: "audio/Action Words/Keep.mp3",            category: "actions" },
 
   // ── NATURE ───────────────────────────────────────────
-  { english: "is it raining tomorrow", filipino: "maulan bukas", manide: "Magimes dumaak", phonetic: "ma-GI-mes du-MA-ak", audio: "audio/Simple Sentences/Maulan Bukas.mp3", category: "nature" },
+  { english: "is it raining tomorrow", filipino: "maulan bukas", manide: "Magimes dumaak", phonetic: "ma-GI-mes du-MA-ak", audio: "audio/Simple Sentences/maulanbukas.mp3", category: "nature" },
   { english: "windy",                  filipino: "mahangin",     manide: "Mahitnew",       phonetic: "ma-HIT-new",         audio: "audio/Simple Sentences/Mahangin.mp3",    category: "nature" },
 
   // ── DESCRIPTIVE WORDS ────────────────────────────────
@@ -105,8 +105,8 @@ const dictionary = [
   { english: "bad",         filipino: "masama",      manide: "Malaot",        phonetic: "ma-LA-ot",          audio: "audio/Basic Daily use words/Bad.mp3",       category: "descriptive" },
   { english: "safe",        filipino: "ligtas",      manide: "Ligtas",        phonetic: "LIG-tas",           audio: "audio/Basic Daily use words/Safe.mp3",      category: "descriptive" },
   { english: "dangerous",   filipino: "mapanganib",  manide: "Kakikipot",     phonetic: "ka-ki-KI-pot",      audio: "audio/Basic Daily use words/Dangerous.mp3", category: "descriptive" },
-  { english: "annoying",    filipino: "nakakainis",  manide: "Magkaiinis ka", phonetic: "mag-ka-i-I-nis ka", audio: "audio/Simple Sentences/Nakakainis ka.mp3",  category: "descriptive" },
-  { english: "you're ugly", filipino: "mapangit ka", manide: "Malaot ka",     phonetic: "ma-LA-ot ka",       audio: "audio/Simple Sentences/Mapangit ka.mp3",    category: "descriptive" },
+  { english: "annoying",    filipino: "nakakainis",  manide: "Magkaiinis ka", phonetic: "mag-ka-i-I-nis ka", audio: "audio/Simple Sentences/nakakainiska.mp3",  category: "descriptive" },
+  { english: "you're ugly", filipino: "mapangit ka", manide: "Malaot ka",     phonetic: "ma-LA-ot ka",       audio: "audio/Simple Sentences/mapangitka.mp3",    category: "descriptive" },
 
   // ── DAILY LIFE ───────────────────────────────────────
   { english: "here",     filipino: "dito",     manide: "Dii",             phonetic: "DI-i",                audio: "audio/Basic Daily use words/Here.mp3",               category: "daily" },
@@ -114,15 +114,15 @@ const dictionary = [
   // { english: "far",   filipino: "malayo",   manide: "Daayu kamudan",   phonetic: "da-A-yu ka-MU-dan",   audio: "audio/far.mp3",                                      category: "daily" },
   { english: "today",    filipino: "ngayon",   manide: "Kumena",          phonetic: "ku-ME-na",            audio: "audio/Basic Daily use words/Today.mp3",              category: "daily" },
   { english: "tomorrow", filipino: "bukas",    manide: "Gumaak",          phonetic: "gu-MA-ak",            audio: "audio/Basic Daily use words/Tomorrow.mp3",           category: "daily" },
-  { english: "noon",     filipino: "tanghali", manide: "Magayon admudto", phonetic: "ma-GA-yon ad-MUD-to", audio: "audio/Simple Sentences/Magandang tanghali.mp3",      category: "daily" },
+  { english: "noon",     filipino: "tanghali", manide: "Magayon admudto", phonetic: "ma-GA-yon ad-MUD-to", audio: "audio/Simple Sentences/magandangtanghali.mp3",      category: "daily" },
 
   // ── PHRASES ──────────────────────────────────────────
-  { english: "what are you doing",               filipino: "anong ginagawa mo",        manide: "Wa ano gawa-gawa mo",       phonetic: "wa A-no GA-wa-GA-wa mo",        audio: "audio/Simple Sentences/Anong ginagawa mo.mp3",          category: "phrases" },
-  { english: "what do you want to eat",          filipino: "anong gusto mong kainin",  manide: "Wa ano ibog mo ikaon",      phonetic: "wa A-no I-bog mo i-KA-on",      audio: "audio/Simple Sentences/Anong gusto mong pagkain.mp3",   category: "phrases" },
-  // { english: "can you come with me", filipino: "pwede mo akong samahan", manide: "Atebanikmo", phonetic: "a-te-BA-nik-mo", audio: "audio/comewithme.mp3", category: "phrases" },
-  { english: "is there anything you want to say", filipino: "may gusto ka bang sabihin", manide: "Igakang ibog a igkado", phonetic: "i-GA-kang I-bog a ig-KA-do",   audio: "audio/Simple Sentences/May gusto kabang sabihin.mp3", category: "phrases" },
-  { english: "listen to me",                     filipino: "makinig ka sa akin",       manide: "Magkalkal ka da-ko",        phonetic: "mag-KAL-kal ka da-KO",          audio: "audio/Simple Sentences/Makinig ka sakin.mp3",         category: "phrases" },
-  { english: "lend me your things",              filipino: "pahiram ng gamit mo",      manide: "Pasubliin ako ng gamit mo", phonetic: "pa-sub-LI-in A-ko ng GA-mit mo", audio: "audio/Simple Sentences/Pahiram ako ng gamit mo.mp3", category: "phrases" },
+  { english: "what are you doing",               filipino: "anong ginagawa mo",        manide: "Wa ano gawa-gawa mo",       phonetic: "wa A-no GA-wa-GA-wa mo",        audio: "audio/Simple Sentences/Anongginagawamo.mp3",          category: "phrases" },
+  { english: "what do you want to eat",          filipino: "anong gusto mong kainin",  manide: "Wa ano ibog mo ikaon",      phonetic: "wa A-no I-bog mo i-KA-on",      audio: "audio/Simple Sentences/Anonggustomongdpagkain.mp3",   category: "phrases" },
+  { english: "can you come with me", filipino: "pwede mo akong samahan", manide: "Atebanikmo", phonetic: "a-te-BA-nik-mo", audio: "audio/pwedemobaakongsamahan.mp3", category: "phrases" },
+  { english: "is there anything you want to say", filipino: "may gusto ka bang sabihin", manide: "Igakang ibog a igkado", phonetic: "i-GA-kang I-bog a ig-KA-do",   audio: "audio/Simple Sentences/maygustokabangsabihin.mp3", category: "phrases" },
+  { english: "listen to me",                     filipino: "makinig ka sa akin",       manide: "Magkalkal ka da-ko",        phonetic: "mag-KAL-kal ka da-KO",          audio: "audio/Simple Sentences/makinigkasakin.mp3",         category: "phrases" },
+  { english: "lend me your things",              filipino: "pahiram ng gamit mo",      manide: "Pasubliin ako ng gamit mo", phonetic: "pa-sub-LI-in A-ko ng GA-mit mo", audio: "audio/Simple Sentences/pahiramakonggamitmo.mp3", category: "phrases" },
   // { english: "i will return it", filipino: "ibabalik ko na", manide: "Ipagsuhi ko di ka", phonetic: "i-pag-SU-hi ko di ka", audio: "audio/iwillreturn.mp3", category: "phrases" },
 
   // ── NATURE & HEALTH ──────────────────────────────────
