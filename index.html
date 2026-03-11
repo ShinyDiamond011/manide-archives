@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Manide Archives — Manide Language & Heritage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo">The <span>Manide</span> Archives</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#culture">Culture</a></li>
+    <li><a href="#categories">Language</a></li>
+    <li><a href="#translator">Translator</a></li>
+    <li><a href="#orthography">Orthography</a></li>
+    <li><a href="#map-section">Location</a></li>
+  </ul>
+  <div class="nav-search">
+    <input type="text" id="navSearchInput" placeholder="Search a word…" />
+    <button id="navSearchBtn">🔍</button>
+  </div>
+  <!-- Hamburger — only visible on mobile -->
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile slide-down menu -->
+<nav class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#culture">Culture</a></li>
+    <li><a href="#categories">Language</a></li>
+    <li><a href="#translator">Translator</a></li>
+    <li><a href="#orthography">Orthography</a></li>
+    <li><a href="#map-section">Location</a></li>
+  </ul>
+  <div class="nav-mobile-search">
+    <input type="text" id="mobileSearchInput" placeholder="Search a word…" />
+    <button id="mobileSearchBtn">🔍</button>
+  </div>
+</nav>
+
+
+<!-- ══ HERO ════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <!-- Image credit pill — shown bottom-left while each slide is active -->
+  <div class="hero-credit" id="heroCredit" aria-live="polite">
+    <span class="hero-credit-icon">📷</span>
+    <span class="hero-credit-text">
+      <strong>Photo Source</strong>
+      <span id="heroCreditLabel">—</span>
+    </span>
+  </div>
+
+  <div class="hero-badge">Preserving Indigenous Heritage · Camarines Norte, Philippines</div>
+  <h1>The Living Voice of the <em>Manide</em> People</h1>
+  <p>
+    The Manide Archives is a digital sanctuary for the Manide language —
+    spoken by the Manide tribe of Camarines Norte.
+    Explore, listen, and help keep this language alive for generations to come.
+  </p>
+  <div class="hero-cta">
+    <a href="#translator" class="btn-primary">Try the Translator</a>
+    <a href="#about" class="btn-outline">Meet the Manide</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+
+<!-- ══ ABOUT ════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <div class="about-img-main">
+          <img src="images/manide4.jpg" alt="Manide Community of Camarines Norte">
+        </div>
+        <div class="about-img-badge">
+          <strong>~4,000</strong>
+          <span>Manide speakers<br>in the Philippines</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">Who Are They</div>
+        <h2 class="section-title">The Manide People of Camarines Norte</h2>
+        <div class="divider"></div>
+        <p>
+          The Manide are one of the indigenous Negrito peoples of the Philippines,
+          found mainly in Camarines Norte and nearby areas of Quezon. They are known
+          for their deep connection to the forest, their oral traditions, and their
+          distinct language, which carries centuries of ecological knowledge, ritual,
+          and cultural identity.
+        </p>
+        <p>
+          Their language is classified as threatened (EGIDS 6b) by Ethnologue — still
+          spoken, but facing decline as younger generations increasingly shift to Tagalog
+          and Bicol. As one community elder noted during interviews, <em>"Habang maliit
+          pa rin sila ay naririnig na ang Manide"</em> — children are still hearing the
+          language young, but school shifts them toward Tagalog.
+        </p>
+        <p>
+          This archive exists to document, preserve, and celebrate the Manide language
+          before it fades — ensuring that oral traditions, history, and cultural wisdom
+          are not lost to time.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <strong>EGIDS 6b</strong>
+            <span>Threatened language status</span>
+          </div>
+          <div class="stat">
+            <strong>Negrito</strong>
+            <span>Indigenous people of Luzon</span>
+          </div>
+          <div class="stat">
+            <strong>Bicol</strong>
+            <span>Region V, Philippines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ CULTURE ══════════════════════════════════════════ -->
+<section id="culture">
+  <div class="container">
+
+    <div class="culture-header">
+      <div>
+        <div class="section-label">Way of Life</div>
+        <h2 class="section-title">Culture &amp; Traditions</h2>
+        <div class="divider"></div>
+      </div>
+      <p class="section-sub culture-intro">
+        The Manide people maintain a rich set of traditions and practices, many of which
+        have been passed down through generations entirely through oral language.
+      </p>
+    </div>
+
+    <div class="culture-grid">
+
+      <!-- Card 1 — Traditional Medicine -->
+      <div class="culture-card" data-index="01">
+        <div class="culture-card-inner">
+          <div class="culture-svg-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Leaf / herb -->
+              <path d="M32 56 C32 56 10 44 10 26 C10 14 20 8 32 8 C44 8 54 14 54 26 C54 44 32 56 32 56Z" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.5"/>
+              <path d="M32 56 L32 20" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M32 38 C26 32 18 30 18 30" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M32 30 C38 24 46 22 46 22" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M32 46 C28 40 22 38 22 38" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
+              <!-- small cross -->
+              <rect x="28" y="12" width="8" height="2.5" rx="1.2" fill="#8B1A1A"/>
+              <rect x="30.75" y="9.5" width="2.5" height="8" rx="1.2" fill="#8B1A1A"/>
+            </svg>
+          </div>
+          <div class="culture-card-body">
+            <h3>Traditional Medicine</h3>
+            <p>
+              The Manide use herbal remedies passed down through generations.
+              A key plant is the <em>Magtatabako</em> — leaves used to treat
+              stomach pain, found in their ancestral forest land.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Traditional Clothing -->
+      <div class="culture-card" data-index="02">
+        <div class="culture-card-inner">
+          <div class="culture-svg-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Woven fabric / tapis silhouette -->
+              <rect x="16" y="20" width="32" height="26" rx="3" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.5"/>
+              <!-- weave pattern lines horizontal -->
+              <line x1="16" y1="27" x2="48" y2="27" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+              <line x1="16" y1="34" x2="48" y2="34" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+              <line x1="16" y1="41" x2="48" y2="41" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+              <!-- weave vertical -->
+              <line x1="24" y1="20" x2="24" y2="46" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+              <line x1="32" y1="20" x2="32" y2="46" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+              <line x1="40" y1="20" x2="40" y2="46" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+              <!-- shoulder ties -->
+              <path d="M16 20 L10 12" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M48 20 L54 12" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="10" cy="11" r="2" fill="#8B1A1A"/>
+              <circle cx="54" cy="11" r="2" fill="#8B1A1A"/>
+            </svg>
+          </div>
+          <div class="culture-card-body">
+            <h3>Traditional Clothing</h3>
+            <p>
+              Traditionally, women wear the <em>tapis</em> and men wear the <em>bahag</em>.
+              While modern clothing is now more common, traditional attire is still worn
+              during cultural celebrations and gatherings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — Respect & Community -->
+      <div class="culture-card" data-index="03">
+        <div class="culture-card-inner">
+          <div class="culture-svg-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Two hands — pagmamano gesture -->
+              <!-- elder hand (top, open) -->
+              <path d="M18 22 C18 22 22 18 32 18 C42 18 46 22 46 22" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M18 22 L18 30 C18 30 22 34 32 34 C42 34 46 30 46 30 L46 22" stroke="#C9A84C" stroke-width="1.5" stroke-linejoin="round"/>
+              <!-- younger hand below, reaching up -->
+              <path d="M24 46 L24 36 C24 34.5 26 34 26 34" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M24 36 C24 34 28 33 30 35 L30 46" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- circle of community dots -->
+              <circle cx="32" cy="54" r="2" fill="#C9A84C" opacity="0.7"/>
+              <circle cx="40" cy="51" r="1.5" fill="#C9A84C" opacity="0.5"/>
+              <circle cx="24" cy="51" r="1.5" fill="#C9A84C" opacity="0.5"/>
+              <circle cx="46" cy="46" r="1.2" fill="#C9A84C" opacity="0.35"/>
+              <circle cx="18" cy="46" r="1.2" fill="#C9A84C" opacity="0.35"/>
+              <!-- respect arc -->
+              <path d="M22 38 C22 38 26 42 32 42 C38 42 42 38 42 38" stroke="#C9A84C" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="culture-card-body">
+            <h3>Respect &amp; Community</h3>
+            <p>
+              The Manide practice <em>pagmamano</em> — placing the hand on an elder's
+              forehead as a sign of respect. Community leadership rotates every three
+              years, and decisions are made collectively.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 — Music & Dance -->
+      <div class="culture-card" data-index="04">
+        <div class="culture-card-inner">
+          <div class="culture-svg-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Guitar body -->
+              <ellipse cx="32" cy="42" rx="11" ry="13" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.5"/>
+              <ellipse cx="32" cy="42" rx="5" ry="5.5" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+              <!-- neck -->
+              <rect x="30" y="12" width="4" height="22" rx="2" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.2"/>
+              <!-- headstock -->
+              <rect x="28" y="8" width="8" height="6" rx="2" fill="rgba(139,26,26,0.3)" stroke="#8B1A1A" stroke-width="1.2"/>
+              <!-- strings -->
+              <line x1="31" y1="14" x2="31" y2="52" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+              <line x1="33" y1="14" x2="33" y2="52" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+              <!-- music notes -->
+              <circle cx="50" cy="22" r="2.5" fill="#8B1A1A"/>
+              <line x1="52.5" y1="22" x2="52.5" y2="14" stroke="#8B1A1A" stroke-width="1.2"/>
+              <circle cx="44" cy="16" r="2.5" fill="#8B1A1A"/>
+              <line x1="46.5" y1="16" x2="46.5" y2="8" stroke="#8B1A1A" stroke-width="1.2"/>
+              <line x1="46.5" y1="8" x2="52.5" y2="10" stroke="#8B1A1A" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="culture-card-body">
+            <h3>Music &amp; Dance</h3>
+            <p>
+              The Manide have traditional dances performed solo, in traditional clothing,
+              accompanied by live music including guitar. These performances are central
+              to their cultural celebrations and IP Week events.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 — Livelihood -->
+      <div class="culture-card" data-index="05">
+        <div class="culture-card-inner">
+          <div class="culture-svg-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Rice stalks -->
+              <line x1="20" y1="54" x2="20" y2="24" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              <ellipse cx="20" cy="22" rx="3" ry="5" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
+              <ellipse cx="16" cy="30" rx="2.5" ry="4.5" fill="rgba(201,168,76,0.3)" stroke="#C9A84C" stroke-width="1" transform="rotate(-20 16 30)"/>
+              <ellipse cx="24" cy="28" rx="2.5" ry="4.5" fill="rgba(201,168,76,0.3)" stroke="#C9A84C" stroke-width="1" transform="rotate(20 24 28)"/>
+              <!-- crab (alimango) -->
+              <ellipse cx="40" cy="44" rx="8" ry="5" fill="rgba(139,26,26,0.2)" stroke="#8B1A1A" stroke-width="1.3"/>
+              <!-- claws -->
+              <path d="M32 42 C28 38 24 40 24 40" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M32 46 C28 50 24 48 24 48" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M48 42 C52 38 56 40 56 40" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M48 46 C52 50 56 48 56 48" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
+              <!-- legs -->
+              <line x1="36" y1="49" x2="34" y2="54" stroke="#8B1A1A" stroke-width="1" stroke-linecap="round"/>
+              <line x1="40" y1="49" x2="40" y2="54" stroke="#8B1A1A" stroke-width="1" stroke-linecap="round"/>
+              <line x1="44" y1="49" x2="46" y2="54" stroke="#8B1A1A" stroke-width="1" stroke-linecap="round"/>
+              <!-- eyes -->
+              <circle cx="36" cy="41" r="1.2" fill="#8B1A1A"/>
+              <circle cx="44" cy="41" r="1.2" fill="#8B1A1A"/>
+            </svg>
+          </div>
+          <div class="culture-card-body">
+            <h3>Livelihood</h3>
+            <p>
+              Women traditionally plant crops and catch <em>alimango</em> (mud crabs)
+              from the sea, while men are considered heads of the family. The NCIP
+              provides livelihood support and scholarships to Manide youth.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 — Celebrations -->
+      <div class="culture-card" data-index="06">
+        <div class="culture-card-inner">
+          <div class="culture-svg-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Gathering circle of people silhouettes -->
+              <circle cx="32" cy="32" r="14" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+              <!-- 6 people around circle -->
+              <circle cx="32" cy="16" r="3" fill="rgba(201,168,76,0.5)" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="44" cy="22" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="44" cy="42" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="32" cy="48" r="3" fill="rgba(201,168,76,0.5)" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="20" cy="42" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="20" cy="22" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
+              <!-- center fire / star -->
+              <polygon points="32,26 33.5,30.5 38,30.5 34.5,33.5 35.8,38 32,35.2 28.2,38 29.5,33.5 26,30.5 30.5,30.5" fill="#8B1A1A" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="culture-card-body">
+            <h3>Celebrations</h3>
+            <p>
+              The Manide celebrate National Indigenous Peoples Month (NIPM) and
+              hold simple gatherings called <em>magkakaateb</em> (being together).
+              They also observe Philippine national holidays as part of wider society.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.culture-grid -->
+
+    <!-- Did You Know -->
+    <div class="did-you-know">
+      <div class="dyk-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#C9A84C" stroke-width="1.5" fill="rgba(201,168,76,0.12)"/>
+          <circle cx="16" cy="10" r="2" fill="#C9A84C"/>
+          <rect x="14.5" y="15" width="3" height="9" rx="1.5" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <div class="dyk-text">
+        <strong>Did you know?</strong>
+        In the past, the Manide were wary of outsiders — when they had to speak
+        with people from other groups, they would turn their backs while communicating
+        as a way to maintain safety and separation. Today, the community is open to
+        engagement while continuing to protect their cultural identity.
+      </div>
+    </div>
+
+    <!-- Important Note on Naming -->
+    <div class="naming-note">
+      <div class="naming-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32" aria-hidden="true">
+          <path d="M16 4 L29 27 H3 Z" stroke="#8B1A1A" stroke-width="1.5" fill="rgba(139,26,26,0.12)" stroke-linejoin="round"/>
+          <rect x="14.5" y="13" width="3" height="7" rx="1.5" fill="#8B1A1A"/>
+          <circle cx="16" cy="23" r="1.8" fill="#8B1A1A"/>
+        </svg>
+      </div>
+      <div class="naming-text">
+        <strong>A Note on Names:</strong>
+        The Manide people do not wish to be referred to as <em>Abiyan</em> or
+        <em>Bihog</em> — both words carry the meaning of <em>alipin</em> (slave)
+        and are considered degrading. They prefer to be recognized simply as
+        <strong>Manide</strong>. This archive uses "Abiyan" only as a project
+        title, not as a label for the people or their identity.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ LANGUAGE CATEGORIES ══════════════════════════════ -->
+<section id="categories">
+  <div class="container">
+    <div class="section-label">Explore the Language</div>
+    <h2 class="section-title">Browse by Category</h2>
+    <div class="divider"></div>
+    <p class="section-sub" style="margin-bottom: 40px;">
+      Discover Manide words and phrases organized by theme. Each category includes
+      vocabulary, example sentences, and audio pronunciation from native speakers.
+    </p>
+    <div class="cat-grid">
+      <a href="#translator" class="cat-card" data-filter="greetings">
+        <div class="cat-icon red">🗣️</div>
+        <h3>Greetings</h3>
+        <p>Everyday expressions and common salutations in Manide</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="family">
+        <div class="cat-icon gold">👨‍👩‍👧</div>
+        <h3>Family &amp; People</h3>
+        <p>Terms for family members and community roles</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="nature">
+        <div class="cat-icon brown">🌿</div>
+        <h3>Nature &amp; Environment</h3>
+        <p>Words for the forest, animals, plants, and the land</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="actions">
+        <div class="cat-icon dark">⚡</div>
+        <h3>Action Words</h3>
+        <p>Verbs and movement words used in daily Manide life</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="numbers">
+        <div class="cat-icon red">🔢</div>
+        <h3>Numbers</h3>
+        <p>The Manide numeral system from one to ten</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="phrases">
+        <div class="cat-icon gold">💬</div>
+        <h3>Common Phrases</h3>
+        <p>Useful everyday sentences and conversational expressions</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="descriptive">
+        <div class="cat-icon brown">✨</div>
+        <h3>Descriptive Words</h3>
+        <p>Adjectives and describing words in Manide</p>
+      </a>
+      <a href="#translator" class="cat-card" data-filter="daily">
+        <div class="cat-icon dark">🏡</div>
+        <h3>Daily Life</h3>
+        <p>Time, location, and everyday situational words</p>
+      </a>
+      <a href="#orthography" class="cat-card">
+        <div class="cat-icon red">📖</div>
+        <h3>Manide Orthography</h3>
+        <p>The writing system and sound structure of the language</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ TRANSLATOR ════════════════════════════════════════ -->
+<section id="translator">
+  <div class="container">
+    <div class="section-header-center">
+      <div class="section-label">Translation Tool</div>
+      <h2 class="section-title">Filipino / English → Manide</h2>
+      <div class="divider center"></div>
+      <p class="section-sub center">
+        Type a word in Filipino or English and discover its Manide equivalent,
+        complete with a pronunciation guide and audio playback from a native speaker.
+      </p>
+    </div>
+
+    <!-- Category filter chips -->
+    <div class="filter-chips" id="filterChips">
+      <button class="chip active" data-cat="all">All</button>
+      <button class="chip" data-cat="greetings">Greetings</button>
+      <button class="chip" data-cat="numbers">Numbers</button>
+      <button class="chip" data-cat="actions">Actions</button>
+      <button class="chip" data-cat="family">Family</button>
+      <button class="chip" data-cat="phrases">Phrases</button>
+      <button class="chip" data-cat="descriptive">Descriptive</button>
+      <button class="chip" data-cat="nature">Nature</button>
+      <button class="chip" data-cat="daily">Daily Life</button>
+    </div>
+
+    <div class="translator-box">
+      <div class="translator-lang-bar">
+        <select class="lang-select" id="sourceLang">
+          <option value="filipino">Filipino</option>
+          <option value="english">English</option>
+        </select>
+        <button class="lang-arrow" id="swapBtn" title="Switch language">⇄</button>
+        <select class="lang-select" disabled style="opacity:.7;"><option>Manide</option></select>
+      </div>
+      <div class="translator-panels">
+        <div class="trans-panel">
+          <label>Input Word or Phrase</label>
+          <textarea id="inputWord" placeholder="Type here… (e.g. salamat, hello, kumain)"></textarea>
+        </div>
+        <div class="trans-panel">
+          <label>Manide Translation</label>
+          <div class="trans-result empty" id="outputWord">Translation will appear here…</div>
+          <button class="audio-btn" id="audioPlayBtn">▶ Play Audio</button>
+        </div>
+      </div>
+      <div class="phonetic-strip">
+        <span class="ph-label">Pronunciation</span>
+        <span class="ph-text" id="phoneticGuide">— Enter a word above and click Translate —</span>
+      </div>
+      <div class="trans-btn-row">
+        <button class="translate-btn" id="translateBtn">Translate →</button>
+      </div>
+    </div>
+
+    <!-- Word list table -->
+    <div class="word-list-wrap">
+      <h3 class="word-list-title">Word Library</h3>
+      <div class="word-list-search-row">
+        <input type="text" id="wordListSearch" placeholder="Filter words…" class="word-list-search"/>
+      </div>
+      <div class="word-table-wrap">
+        <table class="word-table" id="wordTable">
+          <thead>
+            <tr>
+              <th>English</th>
+              <th>Filipino</th>
+              <th>Manide</th>
+              <th>Pronunciation</th>
+              <th>Audio</th>
+            </tr>
+          </thead>
+          <tbody id="wordTableBody">
+            <!-- Populated by script.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ ORTHOGRAPHY ══════════════════════════════════════ -->
+<section id="orthography">
+  <div class="container">
+    <div class="section-label">Writing System</div>
+    <h2 class="section-title">Manide Orthography</h2>
+    <div class="divider"></div>
+    <p class="section-sub" style="margin-bottom: 40px;">
+      The Manide language uses a phonemic orthography — each letter corresponds to a distinct
+      sound. Below is a guide to the alphabet. Click Listen to hear each sound pronounced
+      by a native Manide speaker.
+    </p>
+    <div class="ortho-grid">
+      <div class="ortho-card">
+        <div class="letter">A a</div>
+        <div class="pronunciation">/ a /</div>
+        <div class="example">as in <em>Apat</em> (four)</div>
+        <button class="play-small" data-audio="audio/Numbers/4.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">B b</div>
+        <div class="pronunciation">/ b /</div>
+        <div class="example">as in <em>Basa</em> (read)</div>
+        <button class="play-small" data-audio="audio/Basic Daily use words/Read.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">D d</div>
+        <div class="pronunciation">/ d /</div>
+        <div class="example">as in <em>Dawha</em> (two)</div>
+        <button class="play-small" data-audio="audio/Numbers/Dalawa.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">E e</div>
+        <div class="pronunciation">/ ɛ /</div>
+        <div class="example">as in <em>Begkat</em> (wake up)</div>
+        <button class="play-small" data-audio="audio/Action Words/Wake.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">G g</div>
+        <div class="pronunciation">/ g /</div>
+        <div class="example">as in <em>Gumaak</em> (tomorrow)</div>
+        <button class="play-small" data-audio="audio/Basic Daily use words/Tomorrow.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">I i</div>
+        <div class="pronunciation">/ i /</div>
+        <div class="example">as in <em>Ibil</em> (cry)</div>
+        <button class="play-small" data-audio="audio/Action Words/Cry.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">K k</div>
+        <div class="pronunciation">/ k /</div>
+        <div class="example">as in <em>Kuldit</em> (walk)</div>
+        <button class="play-small" data-audio="audio/Basic Daily use words/Walk.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">L l</div>
+        <div class="pronunciation">/ l /</div>
+        <div class="example">as in <em>Lima</em> (five)</div>
+        <button class="play-small" data-audio="audio/Numbers/5.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">M m</div>
+        <div class="pronunciation">/ m /</div>
+        <div class="example">as in <em>Makusog</em> (fast)</div>
+        <button class="play-small" data-audio="audio/Basic Daily use words/Fast.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">N n</div>
+        <div class="pronunciation">/ n /</div>
+        <div class="example">as in <em>Nalingawan</em> (forget)</div>
+        <button class="play-small" data-audio="audio/Action Words/Forget.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">O o</div>
+        <div class="pronunciation">/ o /</div>
+        <div class="example">as in <em>Okum</em> (smile)</div>
+        <button class="play-small" data-audio="audio/Action Words/Smile.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">P p</div>
+        <div class="pronunciation">/ p /</div>
+        <div class="example">as in <em>Piges</em> (sleep)</div>
+        <button class="play-small" data-audio="audio/Action Words/Sleep.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">S s</div>
+        <div class="pronunciation">/ s /</div>
+        <div class="example">as in <em>Sagak</em> (laugh)</div>
+        <button class="play-small" data-audio="audio/Action Words/Laugh.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">T t</div>
+        <div class="pronunciation">/ t /</div>
+        <div class="example">as in <em>Tatlo</em> (three)</div>
+        <button class="play-small" data-audio="audio/Numbers/3.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">U u</div>
+        <div class="pronunciation">/ u /</div>
+        <div class="example">as in <em>Ulaw</em> (shout)</div>
+        <button class="play-small" data-audio="audio/Action Words/Shout.mp3">▶ Listen</button>
+      </div>
+      <div class="ortho-card">
+        <div class="letter">W w</div>
+        <div class="pronunciation">/ w /</div>
+        <div class="example">as in <em>Walo</em> (eight)</div>
+        <button class="play-small" data-audio="audio/Numbers/8.mp3">▶ Listen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ MAP ══════════════════════════════════════════════ -->
+<section id="map-section">
+  <div class="container">
+    <div class="map-layout">
+      <div class="map-info">
+        <div class="section-label">Where They Live</div>
+        <h2 class="section-title">Homeland of the Manide</h2>
+        <div class="divider"></div>
+        <p>
+          The Manide people inhabit the mountainous interior of Camarines Norte
+          in the Bicol Region of the Philippines. Their ancestral domain spans
+          forested upland areas where they have lived for generations, maintaining
+          traditions tied deeply to the land.
+        </p>
+        <div class="map-detail">
+          <div class="map-detail-icon">📍</div>
+          <div class="map-detail-text">
+            <strong>Primary Location</strong>
+            <span>San Jose, Panganiban, Camarines Norte</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon">🗺️</div>
+          <div class="map-detail-text">
+            <strong>Region</strong>
+            <span>Bicol Region (Region V), Luzon, Philippines</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon">🌿</div>
+          <div class="map-detail-text">
+            <strong>Terrain</strong>
+            <span>Upland forest and mountainous interior</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon">👥</div>
+          <div class="map-detail-text">
+            <strong>Population</strong>
+            <span>Approximately 3,800–4,000 speakers (Ethnologue)</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon">🏛️</div>
+          <div class="map-detail-text">
+            <strong>Government Support</strong>
+            <span>NCIP (National Commission on Indigenous Peoples)</span>
+          </div>
+        </div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126917.5!2d122.6934!3d14.0496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a18ddd4afd3f03%3A0x9f7e9e2b1e2d3f04!2sPanganiban%2C+Camarines+Norte!5e0!3m2!1sen!2sph!4v1"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>The Manide Archives</h3>
+      <p>
+        A digital preservation project dedicated to the Manide language and the
+        Manide people of Camarines Norte, Philippines.
+        Built to ensure their voice is never lost.
+      </p>
+      <p class="footer-school">
+        Our Lady of Lourdes College Foundation<br>
+        Senior High School Department · Daet, Camarines Norte
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">About the Manide</a></li>
+        <li><a href="#culture">Culture &amp; Traditions</a></li>
+        <li><a href="#categories">Language Categories</a></li>
+        <li><a href="#translator">Translator</a></li>
+        <li><a href="#orthography">Orthography</a></li>
+        <li><a href="#map-section">Location</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Researchers</h4>
+      <ul class="researchers-list">
+        <li>Javinal, Lei-Anne Joyce L.</li>
+        <li>Reyes, Kylle Yvonne F.</li>
+        <li>Totanes, Jasmine P.</li>
+        <li>Nopat, Juan Paulo A.</li>
+        <li>Pagao, Collin Ysabelle B.</li>
+        <li>Petiza, Elmarie D.</li>
+        <li>Raro, Jake E.</li>
+        <li>Macaro, Michael V.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 The Manide Archives · Our Lady of Lourdes College Foundation</span>
+    <span>Preserving the Manide Language &amp; Heritage</span>
+  </div>
+</footer>
+
+<!-- Load dictionary data first, then the main script -->
+<script src="words.js"></script>
+<script src="script.js"></script>
+
+<script>
+  /* ══════════════════════════════════════════
+     MOBILE NAV — Hamburger toggle
+  ══════════════════════════════════════════ */
+  (function () {
+    const hamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('navMobileMenu');
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    });
+
+    // Close when any nav link is tapped
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Mobile search wired to the same translator search
+    const mobileSearchInput = document.getElementById('mobileSearchInput');
+    const mobileSearchBtn   = document.getElementById('mobileSearchBtn');
+
+    function mobileSearch() {
+      const q = mobileSearchInput.value.trim();
+      if (!q) return;
+      closeMenu();
+      document.getElementById('sourceLang').value = 'english';
+      document.getElementById('translator').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('inputWord').value = q;
+      setTimeout(() => {
+        const evt = new Event('click');
+        document.getElementById('translateBtn').dispatchEvent(evt);
+      }, 500);
+    }
+
+    mobileSearchBtn.addEventListener('click', mobileSearch);
+    mobileSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') mobileSearch();
+    });
+  })();
+
+
+  /* ══════════════════════════════════════════
+     HERO BACKGROUND SLIDESHOW
+     ────────────────────────────────────────
+     HOW TO USE:
+     Fill in the "source" field for each image
+     with the photographer / website it came from.
+     This appears as a credit overlay on the hero.
+  ══════════════════════════════════════════ */
+  const heroImages = [
+    {
+      src:    'images/manide1.jpg',
+      source: 'Photo from: https://www.richwainwright.com/wp-content/uploads/2020/05/0D3A0270-1-980x653.jpg'
+    },
+    {
+      src:    'images/manide2.jpg',
+      source: 'Photo from: https://www.ragaycamsur.gov.ph/wp-content/uploads/316532741_513833710777110_6583548967745784757_n.jpg'
+    },
+    {
+      src:    'images/manide3.jpg',
+      source: 'Researchers Photo 2026'
+    },
+    {
+      src:    'images/manide4.jpg',
+      source: 'Photo from: https://www.ragaycamsur.gov.ph/wp-content/gallery/ragay-supports-the-manide-tribe/316678836_513832984110516_5444249189362810057_n.jpg'
+    }
+    // Add more entries here as needed
+  ];
+
+  (function initHeroSlideshow() {
+    const hero        = document.querySelector('.hero');
+    const creditBox   = document.getElementById('heroCredit');
+    const creditLabel = document.getElementById('heroCreditLabel');
+    if (!hero || heroImages.length === 0) return;
+
+    const slides = heroImages.map((item, i) => {
+      const div = document.createElement('div');
+      div.className = 'hero-slide' + (i === 0 ? ' active' : '');
+      div.style.backgroundImage = `url('${item.src}')`;
+      div.style.animationDirection = i % 2 === 0 ? 'alternate' : 'alternate-reverse';
+      hero.prepend(div);
+      return div;
+    });
+
+    function showCredit(index) {
+      const src = heroImages[index].source;
+      if (src && src.trim() !== '') {
+        creditLabel.textContent = src;
+        creditBox.classList.add('visible');
+      } else {
+        creditBox.classList.remove('visible');
+      }
+    }
+
+    showCredit(0);
+    let current = 0;
+
+    setInterval(() => {
+      creditBox.classList.remove('visible');
+      setTimeout(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+        showCredit(current);
+      }, 500);
+    }, 6000);
+  })();
+</script>
+</body>
+</html>
