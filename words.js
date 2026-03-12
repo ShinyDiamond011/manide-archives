@@ -67,7 +67,7 @@ const dictionary = [
   { english: "hear",     filipino: "marinig",    manide: "Kalkal",            phonetic: "KAL-kal",              audio: "audio/BasicDaily/Hear.mp3",   category: "actions" },
   { english: "speak",    filipino: "magsalita",  manide: "Kado",              phonetic: "KA-do",                audio: "audio/BasicDaily/Speak.mp3",  category: "actions" },
   { english: "listen",   filipino: "makinig",    manide: "Magkalkal",         phonetic: "mag-KAL-kal",          audio: "audio/BasicDaily/Listen.mp3", category: "actions" },
-  { english: "talk",     filipino: "kausap",     manide: "Kaduan",            phonetic: "ka-DU-an",             audio: "audio/ActionWords\/Talk.mp3",            category: "actions" },
+  { english: "talk",     filipino: "kausap",     manide: "Kaduan",            phonetic: "ka-DU-an",             audio: "audio/ActionWords/Talk.mp3",            category: "actions" },
   { english: "laugh",    filipino: "tumawa",     manide: "Sagak",             phonetic: "SA-gak",               audio: "audio/ActionWords/Laugh.mp3",           category: "actions" },
   { english: "cry",      filipino: "umiyak",     manide: "Ibil",              phonetic: "I-bil",                audio: "audio/ActionWords/Cry.mp3",             category: "actions" },
   { english: "smile",    filipino: "ngumiti",    manide: "Okum",              phonetic: "O-kum",                audio: "audio/ActionWords/Smile.mp3",           category: "actions" },
@@ -131,5 +131,6 @@ const dictionary = [
   // { english: "pili nut",        filipino: "pili",           manide: "Pudikit",     phonetic: "pu-DI-kit",       audio: "audio/pudikit.mp3",     category: "nature" },
 
 ];
+
 
 // dictionary is used directly since this file is loaded before script.js
