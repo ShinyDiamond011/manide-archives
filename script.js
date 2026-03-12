@@ -81,7 +81,6 @@ document.getElementById('swapBtn').addEventListener('click', () => {
 });
 
 // ── Translator audio button ───────────────
-// Play Manide MP3
 audioBtn.addEventListener('click', () => {
   if (currentWord) playAudio(currentWord.audio);
 });
@@ -181,9 +180,13 @@ document.querySelectorAll('.play-small').forEach(btn => {
 });
 
 // ══════════════════════════════════════════
-// NAVBAR SEARCH
+// DESKTOP NAVBAR SEARCH
+// navInput / navBtn may be null on mobile
+// since nav.nav-desktop is hidden via CSS,
+// but the elements still exist in the DOM.
 // ══════════════════════════════════════════
 function navSearch() {
+  if (!navInput) return;
   const q = navInput.value.trim();
   if (!q) return;
   langSel.value = 'english';
@@ -192,11 +195,11 @@ function navSearch() {
   setTimeout(() => doTranslate(q), 500);
 }
 
-navBtn.addEventListener('click', navSearch);
-navInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') navSearch(); });
+if (navBtn)   navBtn.addEventListener('click', navSearch);
+if (navInput) navInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') navSearch(); });
 
 // ══════════════════════════════════════════
-// NAVBAR ACTIVE LINK HIGHLIGHT
+// NAVBAR ACTIVE LINK HIGHLIGHT (desktop)
 // ══════════════════════════════════════════
 const sections = document.querySelectorAll('section[id]');
 const navLinks  = document.querySelectorAll('.nav-links a');

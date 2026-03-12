@@ -10,8 +10,12 @@
 </head>
 <body>
 
-<!-- ══ NAVBAR ══════════════════════════════════════════ -->
-<nav>
+<!--
+  ══ DESKTOP NAVBAR ══════════════════════════════════════
+  position:fixed — only visible on desktop (≥ 769px).
+  Hidden entirely on mobile via CSS.
+-->
+<nav class="nav-desktop">
   <div class="nav-logo">The <span>Manide</span> Archives</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -25,36 +29,48 @@
     <input type="text" id="navSearchInput" placeholder="Search a word…" />
     <button id="navSearchBtn">🔍</button>
   </div>
-  <!-- Hamburger — only visible on mobile -->
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
 </nav>
 
-<!-- Mobile slide-down menu -->
-<nav class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#culture">Culture</a></li>
-    <li><a href="#categories">Language</a></li>
-    <li><a href="#translator">Translator</a></li>
-    <li><a href="#orthography">Orthography</a></li>
-    <li><a href="#map-section">Location</a></li>
-  </ul>
-  <div class="nav-mobile-search">
-    <input type="text" id="mobileSearchInput" placeholder="Search a word…" />
-    <button id="mobileSearchBtn">🔍</button>
+<!--
+  ══ MOBILE NAVBAR ═══════════════════════════════════════
+  Completely separate from the desktop nav.
+  Uses position:sticky (NOT fixed) so it lives in the
+  normal document flow, sitting ABOVE the hero in the DOM.
+  This means it is NEVER in the same GPU compositing layer
+  as the hero slideshow — making the transparency bug
+  structurally impossible to occur.
+  Only visible on mobile (≤ 768px) via CSS.
+-->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-nav-bar">
+    <div class="mob-nav-logo">The <span>Manide</span> Archives</div>
+    <button class="mob-nav-toggle" id="mobNavToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-</nav>
+  <div class="mob-nav-drawer" id="mobNavDrawer" aria-hidden="true">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#culture">Culture</a></li>
+      <li><a href="#categories">Language</a></li>
+      <li><a href="#translator">Translator</a></li>
+      <li><a href="#orthography">Orthography</a></li>
+      <li><a href="#map-section">Location</a></li>
+    </ul>
+    <div class="mob-nav-search">
+      <input type="text" id="mobileSearchInput" placeholder="Search a word…" />
+      <button id="mobileSearchBtn">🔍</button>
+    </div>
+  </div>
+</div>
 
 
 <!-- ══ HERO ════════════════════════════════════════════ -->
 <section class="hero" id="home">
   <div class="hero-overlay"></div>
 
-  <!-- Image credit pill — shown bottom-left while each slide is active -->
   <div class="hero-credit" id="heroCredit" aria-live="polite">
     <span class="hero-credit-icon">📷</span>
     <span class="hero-credit-text">
@@ -66,7 +82,7 @@
   <div class="hero-badge">Preserving Indigenous Heritage · Camarines Norte, Philippines</div>
   <h1>The Living Voice of the <em>Manide</em> People</h1>
   <p>
-    The Manide Archives is a digital sanctuary for the Manide language —
+    The Abiyan Archives is a digital sanctuary for the Manide language —
     spoken by the Manide tribe of Camarines Norte.
     Explore, listen, and help keep this language alive for generations to come.
   </p>
@@ -157,13 +173,11 @@
         <div class="culture-card-inner">
           <div class="culture-svg-wrap">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Leaf / herb -->
               <path d="M32 56 C32 56 10 44 10 26 C10 14 20 8 32 8 C44 8 54 14 54 26 C54 44 32 56 32 56Z" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.5"/>
               <path d="M32 56 L32 20" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M32 38 C26 32 18 30 18 30" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
               <path d="M32 30 C38 24 46 22 46 22" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
               <path d="M32 46 C28 40 22 38 22 38" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
-              <!-- small cross -->
               <rect x="28" y="12" width="8" height="2.5" rx="1.2" fill="#8B1A1A"/>
               <rect x="30.75" y="9.5" width="2.5" height="8" rx="1.2" fill="#8B1A1A"/>
             </svg>
@@ -184,17 +198,13 @@
         <div class="culture-card-inner">
           <div class="culture-svg-wrap">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Woven fabric / tapis silhouette -->
               <rect x="16" y="20" width="32" height="26" rx="3" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.5"/>
-              <!-- weave pattern lines horizontal -->
               <line x1="16" y1="27" x2="48" y2="27" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
               <line x1="16" y1="34" x2="48" y2="34" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
               <line x1="16" y1="41" x2="48" y2="41" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-              <!-- weave vertical -->
               <line x1="24" y1="20" x2="24" y2="46" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
               <line x1="32" y1="20" x2="32" y2="46" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
               <line x1="40" y1="20" x2="40" y2="46" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-              <!-- shoulder ties -->
               <path d="M16 20 L10 12" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M48 20 L54 12" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
               <circle cx="10" cy="11" r="2" fill="#8B1A1A"/>
@@ -217,20 +227,15 @@
         <div class="culture-card-inner">
           <div class="culture-svg-wrap">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Two hands — pagmamano gesture -->
-              <!-- elder hand (top, open) -->
               <path d="M18 22 C18 22 22 18 32 18 C42 18 46 22 46 22" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M18 22 L18 30 C18 30 22 34 32 34 C42 34 46 30 46 30 L46 22" stroke="#C9A84C" stroke-width="1.5" stroke-linejoin="round"/>
-              <!-- younger hand below, reaching up -->
               <path d="M24 46 L24 36 C24 34.5 26 34 26 34" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M24 36 C24 34 28 33 30 35 L30 46" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- circle of community dots -->
               <circle cx="32" cy="54" r="2" fill="#C9A84C" opacity="0.7"/>
               <circle cx="40" cy="51" r="1.5" fill="#C9A84C" opacity="0.5"/>
               <circle cx="24" cy="51" r="1.5" fill="#C9A84C" opacity="0.5"/>
               <circle cx="46" cy="46" r="1.2" fill="#C9A84C" opacity="0.35"/>
               <circle cx="18" cy="46" r="1.2" fill="#C9A84C" opacity="0.35"/>
-              <!-- respect arc -->
               <path d="M22 38 C22 38 26 42 32 42 C38 42 42 38 42 38" stroke="#C9A84C" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
             </svg>
           </div>
@@ -250,17 +255,12 @@
         <div class="culture-card-inner">
           <div class="culture-svg-wrap">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Guitar body -->
               <ellipse cx="32" cy="42" rx="11" ry="13" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.5"/>
               <ellipse cx="32" cy="42" rx="5" ry="5.5" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-              <!-- neck -->
               <rect x="30" y="12" width="4" height="22" rx="2" fill="rgba(201,168,76,0.18)" stroke="#C9A84C" stroke-width="1.2"/>
-              <!-- headstock -->
               <rect x="28" y="8" width="8" height="6" rx="2" fill="rgba(139,26,26,0.3)" stroke="#8B1A1A" stroke-width="1.2"/>
-              <!-- strings -->
               <line x1="31" y1="14" x2="31" y2="52" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
               <line x1="33" y1="14" x2="33" y2="52" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
-              <!-- music notes -->
               <circle cx="50" cy="22" r="2.5" fill="#8B1A1A"/>
               <line x1="52.5" y1="22" x2="52.5" y2="14" stroke="#8B1A1A" stroke-width="1.2"/>
               <circle cx="44" cy="16" r="2.5" fill="#8B1A1A"/>
@@ -284,23 +284,18 @@
         <div class="culture-card-inner">
           <div class="culture-svg-wrap">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Rice stalks -->
               <line x1="20" y1="54" x2="20" y2="24" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
               <ellipse cx="20" cy="22" rx="3" ry="5" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
               <ellipse cx="16" cy="30" rx="2.5" ry="4.5" fill="rgba(201,168,76,0.3)" stroke="#C9A84C" stroke-width="1" transform="rotate(-20 16 30)"/>
               <ellipse cx="24" cy="28" rx="2.5" ry="4.5" fill="rgba(201,168,76,0.3)" stroke="#C9A84C" stroke-width="1" transform="rotate(20 24 28)"/>
-              <!-- crab (alimango) -->
               <ellipse cx="40" cy="44" rx="8" ry="5" fill="rgba(139,26,26,0.2)" stroke="#8B1A1A" stroke-width="1.3"/>
-              <!-- claws -->
               <path d="M32 42 C28 38 24 40 24 40" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
               <path d="M32 46 C28 50 24 48 24 48" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
               <path d="M48 42 C52 38 56 40 56 40" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
               <path d="M48 46 C52 50 56 48 56 48" stroke="#8B1A1A" stroke-width="1.2" stroke-linecap="round"/>
-              <!-- legs -->
               <line x1="36" y1="49" x2="34" y2="54" stroke="#8B1A1A" stroke-width="1" stroke-linecap="round"/>
               <line x1="40" y1="49" x2="40" y2="54" stroke="#8B1A1A" stroke-width="1" stroke-linecap="round"/>
               <line x1="44" y1="49" x2="46" y2="54" stroke="#8B1A1A" stroke-width="1" stroke-linecap="round"/>
-              <!-- eyes -->
               <circle cx="36" cy="41" r="1.2" fill="#8B1A1A"/>
               <circle cx="44" cy="41" r="1.2" fill="#8B1A1A"/>
             </svg>
@@ -321,16 +316,13 @@
         <div class="culture-card-inner">
           <div class="culture-svg-wrap">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- Gathering circle of people silhouettes -->
               <circle cx="32" cy="32" r="14" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
-              <!-- 6 people around circle -->
               <circle cx="32" cy="16" r="3" fill="rgba(201,168,76,0.5)" stroke="#C9A84C" stroke-width="1"/>
               <circle cx="44" cy="22" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
               <circle cx="44" cy="42" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
               <circle cx="32" cy="48" r="3" fill="rgba(201,168,76,0.5)" stroke="#C9A84C" stroke-width="1"/>
               <circle cx="20" cy="42" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
               <circle cx="20" cy="22" r="3" fill="rgba(201,168,76,0.4)" stroke="#C9A84C" stroke-width="1"/>
-              <!-- center fire / star -->
               <polygon points="32,26 33.5,30.5 38,30.5 34.5,33.5 35.8,38 32,35.2 28.2,38 29.5,33.5 26,30.5 30.5,30.5" fill="#8B1A1A" opacity="0.8"/>
             </svg>
           </div>
@@ -710,7 +702,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <h3>The Manide Archives</h3>
+      <h3>The Abiyan Archives</h3>
       <p>
         A digital preservation project dedicated to the Manide language and the
         Manide people of Camarines Norte, Philippines.
@@ -744,10 +736,14 @@
         <li>Raro, Jake E.</li>
         <li>Macaro, Michael V.</li>
       </ul>
+      <div class="footer-teacher">
+        <span class="footer-teacher-label">Capstone Teacher</span>
+        <span class="footer-teacher-name">Mc. Richmond Peñaflor MLL</span>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 The Manide Archives · Our Lady of Lourdes College Foundation</span>
+    <span>© 2025 The Abiyan Archives · Our Lady of Lourdes College Foundation</span>
     <span>Preserving the Manide Language &amp; Heritage</span>
   </div>
 </footer>
@@ -758,39 +754,42 @@
 
 <script>
   /* ══════════════════════════════════════════
-     MOBILE NAV — Hamburger toggle
+     MOBILE NAV
+     Uses position:sticky on a plain <div> that
+     sits above the hero in the DOM — no z-index
+     battles, no GPU compositing overlap with the
+     hero slideshow. Transparency is impossible.
   ══════════════════════════════════════════ */
   (function () {
-    const hamburger = document.getElementById('navHamburger');
-    const mobileMenu = document.getElementById('navMobileMenu');
+    const toggle  = document.getElementById('mobNavToggle');
+    const drawer  = document.getElementById('mobNavDrawer');
+    const mobNav  = document.getElementById('mobNav');
 
     function closeMenu() {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
+      drawer.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
     }
 
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    toggle.addEventListener('click', function () {
+      const isOpen = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      drawer.setAttribute('aria-hidden', String(!isOpen));
     });
 
     // Close when any nav link is tapped
-    mobileMenu.querySelectorAll('a').forEach(link => {
+    drawer.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
 
     // Close when tapping outside
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        closeMenu();
-      }
+    document.addEventListener('click', function (e) {
+      if (!mobNav.contains(e.target)) closeMenu();
     });
 
-    // Mobile search wired to the same translator search
+    // Mobile search → translator
     const mobileSearchInput = document.getElementById('mobileSearchInput');
     const mobileSearchBtn   = document.getElementById('mobileSearchBtn');
 
@@ -801,14 +800,13 @@
       document.getElementById('sourceLang').value = 'english';
       document.getElementById('translator').scrollIntoView({ behavior: 'smooth' });
       document.getElementById('inputWord').value = q;
-      setTimeout(() => {
-        const evt = new Event('click');
-        document.getElementById('translateBtn').dispatchEvent(evt);
+      setTimeout(function () {
+        document.getElementById('translateBtn').dispatchEvent(new Event('click'));
       }, 500);
     }
 
     mobileSearchBtn.addEventListener('click', mobileSearch);
-    mobileSearchInput.addEventListener('keydown', (e) => {
+    mobileSearchInput.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') mobileSearch();
     });
   })();
@@ -816,11 +814,6 @@
 
   /* ══════════════════════════════════════════
      HERO BACKGROUND SLIDESHOW
-     ────────────────────────────────────────
-     HOW TO USE:
-     Fill in the "source" field for each image
-     with the photographer / website it came from.
-     This appears as a credit overlay on the hero.
   ══════════════════════════════════════════ */
   const heroImages = [
     {
@@ -839,7 +832,6 @@
       src:    'images/manide4.jpg',
       source: 'Photo from: https://www.ragaycamsur.gov.ph/wp-content/gallery/ragay-supports-the-manide-tribe/316678836_513832984110516_5444249189362810057_n.jpg'
     }
-    // Add more entries here as needed
   ];
 
   (function initHeroSlideshow() {
